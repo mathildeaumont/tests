@@ -126,9 +126,7 @@ module.exports = function (config) {
 
             // include tests files
             'test/unit/loadConf.js',
-            'test/unit/home/*.js',
-            'test/unit/workspace/workspaceFolders.factory.spec.js',
-            'test/unit/workspace/workspace.controller.spec.js',
+            'test/unit/**/*.js',
 
 
             {
@@ -155,7 +153,7 @@ module.exports = function (config) {
 
         preprocessors: {
             'app/**/*.html': 'ng-html2js',
-            'app/studio/**/*.js': 'coverage'
+            //'app/studio/**/*.js': 'coverage'
         },
 
         // test results reporter to use

@@ -1,6 +1,6 @@
 'use strict';
 
-xdescribe('Unit: Testing ToolbarFactory', function () {
+describe('Unit: Testing ToolbarFactory', function () {
     var ToolbarFactory, $httpBackend, result, response, $rootScope;
 
     beforeEach(function () {

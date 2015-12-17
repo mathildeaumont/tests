@@ -2,7 +2,7 @@
 
 /* jshint -W098, -W117 */
 
-xdescribe('Unit: Testing TreeMenu Controller', function () {
+describe('Unit: Testing TreeMenu Controller', function () {
     /**
      * SETUP
      */
@@ -101,25 +101,25 @@ xdescribe('Unit: Testing TreeMenu Controller', function () {
             expect($controller).toBeDefined();
         });
 
-        describe('Properties', function () {
+        xdescribe('Properties', function () {
             it('should provide a selectedTreeMenuDirectoryId property', function () {
                 expect($scope.viewModel.selectedTreeMenuDirectoryId).toBeDefined();
                 expect(typeof $scope.viewModel.selectedTreeMenuDirectoryId).toBe('number');
             });
 
-            it('should provide a rootTree property', function () {
+            xit('should provide a rootTree property', function () {
                 expect($scope.viewModel.rootTree).toBeDefined();
                 expect($scope.viewModel.rootTree instanceof Object).toBe(true);
             });
 
-            it('should provide a openFolder property', function () {
+            xit('should provide a openFolder property', function () {
                 expect($scope.viewModel.openFolder).toBeDefined();
                 expect($scope.viewModel.openFolder instanceof Object).toBe(true);
                 expect($scope.viewModel.openFolder instanceof Object).toBe(true);
             });
         });
 
-        describe('Methods', function () {
+        xdescribe('Methods', function () {
             it('should provide a setSelectedTreeMenuDirectoryId function', function () {
                 expect(typeof $scope.viewModel.setSelectedTreeMenuDirectoryId).toBe('function');
             });

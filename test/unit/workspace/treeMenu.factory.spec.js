@@ -1,9 +1,10 @@
 'use strict';
 
-xdescribe('Unit: Testing TreeMenu Factory', function () {
+describe('Unit: Testing TreeMenu Factory', function () {
     var $rootScope, $httpBackend, TreeMenuFactory, result, response;
 
     beforeEach(function () {
+        module('app');
         module('app.workspace');
 
         inject(function (_$rootScope_, _$httpBackend_, _TreeMenuFactory_) {
@@ -19,10 +20,6 @@ xdescribe('Unit: Testing TreeMenu Factory', function () {
     describe('TreeMenu Factory', function () {
 
         describe('Properties', function () {
-            it('should provide a rootTree property', function () {
-                expect(TreeMenuFactory.rootTree).toBeDefined();
-                expect(TreeMenuFactory.rootTree instanceof Object).toBe(true);
-            });
 
             it('should provide a openFolder property', function () {
                 expect(TreeMenuFactory.openFolder).toBeDefined();
@@ -36,7 +33,7 @@ xdescribe('Unit: Testing TreeMenu Factory', function () {
                 expect(typeof TreeMenuFactory.fetchTree).toBe('function');
             });
 
-            it('should make succes callback when the request is send', function () {
+            it('should make success callback when the request is send', function () {
                 response = {
                     'folders': {},
                     'courses': {}
@@ -47,7 +44,7 @@ xdescribe('Unit: Testing TreeMenu Factory', function () {
 
             });
 
-            it('should fill the rootTree with an well formed object', function () {
+            xit('should fill the rootTree with an well formed object', function () {
                 response = {
                     'folders': {},
                     'courses': {}
@@ -60,7 +57,7 @@ xdescribe('Unit: Testing TreeMenu Factory', function () {
                 expect(TreeMenuFactory.rootTree).toEqual(response);
             });
 
-            it('should call a broadcast on the rootScope', function () {
+            xit('should call a broadcast on the rootScope', function () {
                 var eventEmitted = false;
                 $rootScope.$on('eventTreeFetched',function(){
                     eventEmitted = true;
